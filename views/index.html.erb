@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="WEBTECH Testat">
+      <meta name="keywords" content="">
+      <meta name="author" content="Maximilian Winkler">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="/css/slider.css">
+      <link rel="stylesheet" href="/css/custom.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+      <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $.ajax({url: "/time", success: function(result){
+        $("#result").html(result);
+      }});
+    });
+  });
+  </script>
+
+    </head>
+    <body>
+      <header>
+        <div class="box">
+          <img src="https://via.placeholder.com/80" alt="Website logo">
+        </div>
+
+
+        <div class="box">
+          <i class="fa fa-globe"></i>
+          <span>Whereever</span>
+          <p> Around the world!</p>
+        </div>
+
+ <div class="box">
+          <i class="fa fa-globe"></i>
+          <span>Whereever</span>
+          <p> Around the world!</p>
+        </div>
+
+ <div class="box">
+          <i class="fa fa-globe"></i>
+          <span>Whereever</span>
+          <p> Around the world!</p>
+        </div>
+
+
+      </header>
+       <nav>
+          <ul>
+            <li><a href="#ruby">Element</a></li>
+              <li><a href="">Element</a></li>
+               <li><a href="">Element</a></li>
+                <li><a href="">Element</a></li>
+          </ul>
+        </nav>
+
+        <section class="hero">
+            <img src="https://via.placeholder.com/100" alt="Website logo">
+        </section>
+
+        <main>
+          <div id="ruby">
+                <h1>Ruby</h1>
+                <h3>A programmer's best friend</h3>
+                <img src="https://cdn.slant.co/4406cd37-4d45-418b-a9ef-05e308f3cd81/-/format/jpeg/-/progressive/yes/-/preview/2048x2048/" alt="Ruby logo" class="ruby_img">
+                <p>Ruby is an interpreted, high-level, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+Ruby is dynamically typed and uses garbage collection. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. According to the creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, Basic, and Lisp.</p>
+  <p>Ruby is used for the "backend" for this site</p>
+  <div class="notepaper">
+    <figure class="quote">
+      <blockquote class="curly-quotes" cite="https://rubygarage.org/blog/cool-stuff-in-ruby-language">
+         I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language.
+      </blockquote>
+      <figcaption class="quote-by">— Yukihiro <strong>“Matz”</strong> Matsumoto, creator of Ruby</figcaption>
+    </figure>
+  </div>
+          </div>
+          <div id="Sinatra">
+
+          </div>
+          <h1>Sinatra</h1>
+          <h3>Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort:</h3>
+          <p>As mentioned before, this site uses Ruby to serve content. Specifically, the <strong>Sinatra</strong> framework is used. This framework contains only 2048 LoC and makes it easy to serve dynamic content through a web server</p>
+          <p>The code used in my application is the following:</p>
+
+
+
+<button type="button">Load Date and Time</button>
+
+<div id="result">
+
+    </div>
+
+
+<form action="/form" method="post">
+  <input type="text" name="name" />
+  <input type="submit">
+</form>
+
+
+<canvas id="canvas" width="520" height="200"/>
+
+<script type="text/javascript">
+  var canvas = document.getElementById('canvas'),
+    c = canvas.getContext('2d'),
+    x = 95,
+    y = 125,
+
+    a = 20,
+    b = 50;
+
+function move() {
+    c.clearRect(0, 0, 500, 300);
+    c.fillStyle = "red";
+    c.fillRect(0, y, 5, 5),
+    c.fillRect(b, 5, 15, 15);
+
+    x++;
+    y++;
+    b++
+
+    if (y > canvas.height || x > canvas.width) {
+        y = 0;
+        x = 0;
+    }
+}
+
+setInterval(move, 50);
+</script>
+
+        </main>
+    </body>
+
+    <script type="text/javascript">
+      var date = new Date();
+      document.cookie = "lastVisited=" + date;
+    </script>
+  </html>
