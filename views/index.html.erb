@@ -1,13 +1,17 @@
 <!DOCTYPE html>
+<html lang="en">
     <head>
       <meta charset="UTF-8">
       <meta name="description" content="WEBTECH Testat">
       <meta name="keywords" content="">
+      <title>The real Ruby!</title>
+
       <meta name="author" content="Maximilian Winkler">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/normalize.css">
       <link rel="stylesheet" href="/css/slider.css">
       <link rel="stylesheet" href="/css/custom.css">
+      <link rel="stylesheet" href="/css/responsive.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
@@ -25,25 +29,28 @@
     <body>
       <header>
         <div class="box">
-          <img src="https://via.placeholder.com/80" alt="Website logo">
+<img src="https://image.flaticon.com/icons/svg/159/159781.svg" height= "100" alt="Website logo">
         </div>
 
+        <div class="logo">
+          <img src="https://image.flaticon.com/icons/svg/159/159781.svg" alt="Website logo">
+        </div>
 
         <div class="box">
           <i class="fa fa-globe"></i>
-          <span>Whereever</span>
+          <span>Wherever</span>
           <p> Around the world!</p>
         </div>
 
  <div class="box">
           <i class="fa fa-globe"></i>
-          <span>Whereever</span>
+          <span>Wherever</span>
           <p> Around the world!</p>
         </div>
 
  <div class="box">
           <i class="fa fa-globe"></i>
-          <span>Whereever</span>
+          <span>Wherever</span>
           <p> Around the world!</p>
         </div>
 
@@ -51,22 +58,22 @@
       </header>
        <nav>
           <ul>
-            <li><a href="#ruby">Element</a></li>
-              <li><a href="">Element</a></li>
-               <li><a href="">Element</a></li>
-                <li><a href="">Element</a></li>
+            <li><a href="#ruby">Ruby</a></li>
+              <li><a href="#sinatra">Sinatra</a></li>
+               <li><a href="#rails">Rails</a></li>
+                <li><a href="#canvasID">Canvas element</a></li>
           </ul>
         </nav>
 
-        <section class="hero">
-            <img src="https://via.placeholder.com/100" alt="Website logo">
-        </section>
+        <div class="hero">
+            <img src="/hero.jpg" alt="Website logo">
+        </div>
 
         <main>
           <div id="ruby">
                 <h1>Ruby</h1>
                 <h3>A programmer's best friend</h3>
-                <img src="https://cdn.slant.co/4406cd37-4d45-418b-a9ef-05e308f3cd81/-/format/jpeg/-/progressive/yes/-/preview/2048x2048/" alt="Ruby logo" class="ruby_img">
+                <img src="/ruby.jpeg" alt="Ruby logo" class="ruby_img">
                 <p>Ruby is an interpreted, high-level, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
 Ruby is dynamically typed and uses garbage collection. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. According to the creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, Basic, and Lisp.</p>
   <p>Ruby is used for the "backend" for this site</p>
@@ -79,7 +86,7 @@ Ruby is dynamically typed and uses garbage collection. It supports multiple prog
     </figure>
   </div>
           </div>
-          <div id="Sinatra">
+          <div id="sinatra">
 
           </div>
           <h1>Sinatra</h1>
@@ -101,10 +108,19 @@ Ruby is dynamically typed and uses garbage collection. It supports multiple prog
   <input type="submit">
 </form>
 
+<div id= "rails" >
+  <h1>Rails</h1>
+  <h3>Imagine what you could build if you learned Ruby on Rails…</h3>
+  <p>Learning to build a modern web application is daunting. Ruby on Rails makes it much easier and more fun. It includes everything you need to build fantastic applications, and you can learn it with the support of our large, friendly community.</p>
+  </div>
 
-<canvas id="canvas" width="520" height="200"/>
+<div id = "canvasID">
+  <h1>Canvas element</h1>
+<canvas id="canvas" width="520" height="200">
 
-<script type="text/javascript">
+</canvas>
+
+<script>
   var canvas = document.getElementById('canvas'),
     c = canvas.getContext('2d'),
     x = 95,
@@ -116,7 +132,7 @@ Ruby is dynamically typed and uses garbage collection. It supports multiple prog
 function move() {
     c.clearRect(0, 0, 500, 300);
     c.fillStyle = "red";
-    c.fillRect(0, y, 5, 5),
+    c.fillRect(0, y, 50, 50),
     c.fillRect(b, 5, 15, 15);
 
     x++;
@@ -132,11 +148,15 @@ function move() {
 setInterval(move, 50);
 </script>
 
+
+</div>
         </main>
+
+        <script>
+          var date = new Date();
+          document.cookie = "lastVisited=" + date;
+        </script>
     </body>
 
-    <script type="text/javascript">
-      var date = new Date();
-      document.cookie = "lastVisited=" + date;
-    </script>
+
   </html>

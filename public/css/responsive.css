@@ -1,0 +1,32 @@
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait)
+
+ {
+
+    nav {
+      margin-top: -1em;
+      height: 100%;
+      padding-bottom: 1em;
+    }
+
+    .box{
+      display: none;
+    }
+
+    .logo{
+      display: block;
+
+      margin-top: -2em;
+    }
+
+    .logo img{
+      height: 3em;
+    }
+    ul{
+      flex-direction: column;
+    }
+}
